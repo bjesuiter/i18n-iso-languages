@@ -106,7 +106,7 @@
     "test:circular": "madge --circular --exclude 'madge|source-map' .",
     "test:coverage": "nyc npm run test:mocha",
     "test:mocha": "mocha test/*.js",
-    "util:unraw-mn": "tsx scripts/unraw-mn.ts langs/mn.json"
+    "util:unraw": "tsx scripts/unraw.ts langs/mn.json"
   },
   "bugs": {
     "url": "https://github.com/cospired/i18n-iso-languages.git/issues"
