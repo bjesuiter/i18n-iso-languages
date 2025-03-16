@@ -8,7 +8,8 @@ async function main() {
         languages: Record<string, string>;
     };
 
-    json.languages = Object.fromEntries(Object.entries(json.languages).filter(([key, val]) => key.length > 2 || !val.includes("_")))
+    const filteredEntries = Object.entries(json.languages).filter(([key, val]) => key.length > 2 || !val.includes("_"))
+    json.languages = Object.fromEntries(filteredEntries)
 
     await fs.writeFile(process.argv[2], JSON.stringify(json, null, 2));
 }
